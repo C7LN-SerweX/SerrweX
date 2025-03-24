@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep Minecraft</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Resetowanie domyślnych styli */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
         }
 
         .container {
@@ -20,50 +28,75 @@
         }
 
         .product {
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            padding: 20px;
             text-align: center;
-            width: 250px;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
+            width: 270px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .product:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
         }
 
         .product img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.08);
         }
 
         .product h3 {
-            font-size: 1.2em;
-            color: #333;
+            font-size: 1.4em;
+            color: #fff;
+            margin: 10px 0;
         }
 
         .product p {
             font-size: 1em;
-            color: #555;
+            color: #ddd;
+            line-height: 1.4;
         }
 
         .buy-btn {
-            background-color: #f39c12;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
             border: none;
             color: white;
-            padding: 10px;
-            font-size: 1em;
-            border-radius: 5px;
+            padding: 12px 18px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 12px;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
 
         .buy-btn:hover {
-            background-color: #e67e22;
+            background: linear-gradient(45deg, #e67e22, #c0392b);
+            transform: scale(1.08);
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product {
+                width: 90%;
+            }
         }
     </style>
 </head>
