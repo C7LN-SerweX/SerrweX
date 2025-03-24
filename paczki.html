@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybierz paczkę</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .package {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 90%;
+            max-width: 400px;
+            display: inline-block;
+        }
+
+        .package img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .buy-btn {
+            background: #27ae60;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title"></h1>
+
+    <div id="packages"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const hosting = params.get("hosting");
+        const title = document.getElementById("title");
+        const packages = document.getElementById("packages");
+
+        let options = [];
+
+        if (hosting === "TitanAxe") {
+            title.innerText = "Wybierz paczkę dla TitanAxe";
+            options = [
+                { icon: "bungee.png", name: "Bungee + Survival", price: "3.50 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/3.50PLN" },
+                { icon: "bungee.png", name: "Bungee + BoxPVP", price: "5.50 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/5.50PLN" },
+                { icon: "bungee.png", name: "Bungee + BedWars", price: "10.50 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/10.50PLN" },
+                { icon: "bungee.png", name: "Bungee + Anarchia FFA", price: "11 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/11PLN" }
+            ];
+        } else if (hosting === "IceHost") {
+            title.innerText = "Wybierz paczkę dla IceHost";
+            options = [
+                { icon: "velocity.png", name: "Velocity + Survival", price: "3.50 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/3.50PLN" },
+                { icon: "velocity.png", name: "Velocity + BoxPVP", price: "5.50 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/5.50PLN" },
+                { icon: "velocity.png", name: "Velocity + BedWars", price: "10.50 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/10.50PLN" },
+                { icon: "velocity.png", name: "Velocity + Anarchia FFA", price: "11 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/11PLN" }
+            ];
+        } else {
+            title.innerText = "Wybierz paczkę dla Aternos";
+            options = [
+                { icon: "aternos.png", name: "Survivalowa", price: "3.00 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/3PLN" },
+                { icon: "aternos.png", name: "BoxPVP", price: "5.00 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/5PLN" },
+                { icon: "aternos.png", name: "BedWars", price: "10.00 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/10PLN" },
+                { icon: "aternos.png", name: "Anarchia FFA", price: "11.00 PLN", link: "https://www.paypal.com/paypalme/AntoniW606/11PLN" }
+            ];
+        }
+
+        options.forEach(opt => {
+            packages.innerHTML += `<div class="package">
+                <img src="${opt.icon}" alt="${opt.name}">
+                <h3>${opt.name}</h3>
+                <p>${opt.price}</p>
+                <a class="buy-btn" href="${opt.link}" target="_blank">Kup</a>
+            </div>`;
+        });
+    </script>
+
+</body>
+</html>
