@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep Minecraft</title>
     <style>
-        /* Resetowanie domyślnych styli */
         * {
             margin: 0;
             padding: 0;
@@ -46,13 +45,8 @@
         }
 
         .product img {
-            width: 100%;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .product img:hover {
-            transform: scale(1.08);
+            width: 100px;
+            margin-bottom: 10px;
         }
 
         .product h3 {
@@ -86,53 +80,34 @@
             background: linear-gradient(45deg, #e67e22, #c0392b);
             transform: scale(1.08);
         }
-
-        /* Responsywność */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .product {
-                width: 90%;
-            }
-        }
     </style>
 </head>
 <body>
+
+    <h1>Wybierz hosting dla swojego serwera</h1>
+
     <div class="container">
-        <!-- Produkt 1 -->
         <div class="product">
-            <img src="https://cdn.discordapp.com/attachments/1339939955916542043/1341846810934775818/aternos.png" alt="Produkt 1">
-            <h3>Dowolny Tryb Aternos - 2 PLN</h3>
-            <p>Bardzo Tanie! Uwagi: Na Aternosie Robimy Tylko 1 Trybowe Serwery. <br> Po Większe, Kup Inny Plan</p>
-            <a href="https://www.paypal.com/paypalme/AntoniW606/2PLN" class="buy-btn">Kup teraz</a>
+            <img src="titanaxe.png" alt="TitanAxe">
+            <h3>TitanAxe</h3>
+            <p>Świetny hosting, jak siekiera!</p>
+            <a href="paczki.html?hosting=TitanAxe" class="buy-btn">Kup teraz</a>
         </div>
 
-        <!-- Produkt 2 -->
         <div class="product">
-            <img src="https://cdn.discordapp.com/attachments/1339939955916542043/1341846982423085108/titanaxe.png" alt="Produkt 2">
-            <h3>Dowolny Tryb TitanAxe - 60 PLN</h3>
-            <p>Świetny Hosting Jak Siekiera! <br>Uwagi: Na Stronie Kup Tylko MAX 2 Tryby. Więcej, Kup Na dc.gg/serwex</p>
-            <a href="https://www.paypal.com/paypalme/AntoniW606/60PLN" class="buy-btn">Kup teraz</a>
+            <img src="icehost.png" alt="IceHost">
+            <h3>IceHost</h3>
+            <p>Najlepszy hosting z serwerami jak ACMC!</p>
+            <a href="paczki.html?hosting=IceHost" class="buy-btn">Kup teraz</a>
         </div>
 
-        <!-- Produkt 3 -->
         <div class="product">
-            <img src="https://cdn.discordapp.com/attachments/1339939955916542043/1341847206503907459/icehost.jpg" alt="Produkt 3">
-            <h3>Dowolny Tryb IceHost - 115 PLN</h3>
-            <p>Najlepszy Hosting Który Ma Takie Serwery Jak np. ACMC! <br>Uwagi: Na Stronie Kup Tylko MAX 2 Tryby. Więcej, Kup Na dc.gg/serwex</p>
-            <a href="https://www.paypal.com/paypalme/AntoniW606/115PLN" class="buy-btn">Kup teraz</a>
-        </div>
-
-        <!-- Produkt 4 -->
-        <div class="product">
-            <img src="https://cdn.discordapp.com/attachments/1339939955916542043/1341851750608535563/ovh.png" alt="Produkt 4">
-            <h3>Domena .PL Do Dowolnego Hostingu - 20 PLN</h3>
-            <p>Domena .PL Z Hostingu OVH Cloud!</p>
-            <a href="https://www.paypal.com/paypalme/AntoniW606/20PLN" class="buy-btn">Kup teraz</a>
+            <img src="aternos1.png" alt="Aternos">
+            <h3>Aternos</h3>
+            <p>Darmowy hosting, ale my robimy za cene!</p>
+            <a href="paczki.html?hosting=Aternos" class="buy-btn">Kup teraz</a>
         </div>
     </div>
+
 </body>
 </html>
